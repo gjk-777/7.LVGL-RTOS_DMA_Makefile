@@ -22,7 +22,7 @@ TARGET = FreeRTOSLVGL
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Og
+OPT = -O3
 
 
 #######################################
@@ -81,7 +81,47 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c \
 Core/Src/sysmem.c \
-Core/Src/syscalls.c
+Core/Src/syscalls.c\
+Code_BSP/My_TaskCreate.c \
+Code_BSP/My_Touch.c \
+Code_BSP/sram.c \
+Code_BSP/lcd.c \
+Code_BSP/keyled.c \
+Code_BSP/CAN_handle.c \
+Code_BSP/24CXX/24cxx.c \
+Code_BSP/IIC/myiic.c \
+Code_BSP/TOUCH/ft5206.c \
+Code_BSP/TOUCH/gt9xxx.c \
+Code_BSP/TOUCH/touch.c \
+Code_BSP/TOUCH/ctiic.c \
+Code_BSP/lcd_ex.c \
+Code_BSP/LVGL/porting/lv_port_disp.c \
+Code_BSP/LVGL/porting/lv_port_indev.c \
+Code_BSP/LVGL/porting/lv_port_fs.c \
+Code_BSP/LVGL/keypad_encoder/lv_demo_keypad_encoder.c \
+Code_BSP/LVGL/stress/lv_demo_stress.c \
+Components/lvgl/src/custom/password.c \
+Components/lvgl/src/generated/events_init.c \
+Components/lvgl/src/generated/setup_scr_screen_1.c \
+Components/lvgl/src/generated/gui_guider.c \
+Components/lvgl/src/generated/widgets_init.c \
+Components/lvgl/src/generated/setup_scr_screen_2.c \
+Components/lvgl/src/generated/setup_scr_screen.c \
+Components/lvgl/src/generated/guider_fonts/lv_font_arial_16.c \
+Components/lvgl/src/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_16.c \
+Components/lvgl/src/generated/guider_fonts/lv_font_montserratMedium_12.c \
+Components/lvgl/src/generated/guider_fonts/lv_font_montserratMedium_16.c \
+Components/lvgl/dclock/lv_dclock.c \
+Components/lvgl/src/generated/images/_led0_alpha_40x34.c \
+Components/lvgl/src/generated/guider_fonts/lv_font_montserratMedium_18.c \
+Components/lvgl/src/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_12.c \
+Components/lvgl/src/generated/images/_led0_alpha_30x30.c \
+Components/lvgl/src/generated/images/_led1_alpha_30x30.c \
+Components/lvgl/src/generated/images/_lighthigh_alpha_30x30.c \
+Components/lvgl/src/generated/images/_clock_alpha_30x30.c \
+Components/lvgl/src/generated/images/_ledoff_alpha_30x30.c \
+Components/lvgl/src/custom/custom.c
+
 
 # ASM sources
 ASM_SOURCES =  \
@@ -146,7 +186,22 @@ AS_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include\
+-ICode_BSP \
+-ICode_BSP/24CXX \
+-ICode_BSP/IIC \
+-ICode_BSP/TOUCH \
+-ICode_BSP/LVGL \
+-ICode_BSP/LVGL/src \
+-ICode_BSP/LVGL/porting \
+-ICode_BSP/LVGL/keypad_encoder \
+-ICode_BSP/LVGL/stress \
+-IComponents/lvgl \
+-IComponents/lvgl/dclock \
+-IComponents/lvgl/src/custom \
+-IComponents/lvgl/src/generated \
+-IComponents/lvgl/src/generated/guider_fonts \
+-IComponents/lvgl/src/generated/images
 
 # C includes
 C_INCLUDES =  \
@@ -157,7 +212,22 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include\
+-ICode_BSP \
+-ICode_BSP/24CXX \
+-ICode_BSP/IIC \
+-ICode_BSP/TOUCH \
+-ICode_BSP/LVGL \
+-ICode_BSP/LVGL/src \
+-ICode_BSP/LVGL/porting \
+-ICode_BSP/LVGL/keypad_encoder \
+-ICode_BSP/LVGL/stress \
+-IComponents/lvgl \
+-IComponents/lvgl/dclock \
+-IComponents/lvgl/src/custom \
+-IComponents/lvgl/src/generated \
+-IComponents/lvgl/src/generated/guider_fonts \
+-IComponents/lvgl/src/generated/images
 
 
 # compile gcc flags
