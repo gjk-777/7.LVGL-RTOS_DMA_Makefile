@@ -146,22 +146,7 @@ AS_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
--IDrivers/CMSIS/Include\
--ICode_BSP \
--ICode_BSP/24CXX \
--ICode_BSP/IIC \
--ICode_BSP/TOUCH \
--ICode_BSP/LVGL \
--ICode_BSP/LVGL/src \
--ICode_BSP/LVGL/porting \
--ICode_BSP/LVGL/keypad_encoder \
--ICode_BSP/LVGL/stress \
--IComponents/lvgl \
--IComponents/lvgl/dclock \
--IComponents/lvgl/src/custom \
--IComponents/lvgl/src/generated \
--IComponents/lvgl/src/generated/guider_fonts \
--IComponents/lvgl/src/generated/images
+-IDrivers/CMSIS/Include
 
 # C includes
 C_INCLUDES =  \
@@ -172,22 +157,7 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
--IDrivers/CMSIS/Include\
--ICode_BSP \
--ICode_BSP/24CXX \
--ICode_BSP/IIC \
--ICode_BSP/TOUCH \
--ICode_BSP/LVGL \
--ICode_BSP/LVGL/src \
--ICode_BSP/LVGL/porting \
--ICode_BSP/LVGL/keypad_encoder \
--ICode_BSP/LVGL/stress \
--IComponents/lvgl \
--IComponents/lvgl/dclock \
--IComponents/lvgl/src/custom \
--IComponents/lvgl/src/generated \
--IComponents/lvgl/src/generated/guider_fonts \
--IComponents/lvgl/src/generated/images
+-IDrivers/CMSIS/Include
 
 
 # compile gcc flags
